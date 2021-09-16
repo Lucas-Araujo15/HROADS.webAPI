@@ -56,3 +56,6 @@ C:\Users\fic\Desktop\HROADS.webAPI\Back-end\senai.hroads.webAPI\senai.hroads.web
 C:\Users\fic\Desktop\HROADS.webAPI\Back-end\senai.hroads.webAPI\senai.hroads.webAPI\obj\Debug\net5.0\ref\senai.hroads.webAPI.dll
 C:\Users\fic\Desktop\HROADS.webAPI\Back-end\senai.hroads.webAPI\senai.hroads.webAPI\obj\Debug\net5.0\senai.hroads.webAPI.pdb
 C:\Users\fic\Desktop\HROADS.webAPI\Back-end\senai.hroads.webAPI\senai.hroads.webAPI\obj\Debug\net5.0\senai.hroads.webAPI.genruntimeconfig.cache
+C:\Users\fic\Desktop\HROADS.webAPI\Back-end\senai.hroads.webAPI\senai.hroads.webAPI\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\fic\Desktop\HROADS.webAPI\Back-end\senai.hroads.webAPI\senai.hroads.webAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\fic\Desktop\HROADS.webAPI\Back-end\senai.hroads.webAPI\senai.hroads.webAPI\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
