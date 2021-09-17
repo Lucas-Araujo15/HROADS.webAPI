@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace senai.hroads.webAPI.Controllers
 {
     [Produces("application/json")]
-    
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosController : ControllerBase
@@ -36,6 +36,7 @@ namespace senai.hroads.webAPI.Controllers
             return Ok(_UsuarioRepository.BuscarPorId(id));
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Post(Usuario usuarioInserir)
         {
@@ -43,6 +44,7 @@ namespace senai.hroads.webAPI.Controllers
             return StatusCode(201);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -50,6 +52,7 @@ namespace senai.hroads.webAPI.Controllers
             return NoContent();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public IActionResult Put(int id, Usuario usuarioAtualizado)
         {

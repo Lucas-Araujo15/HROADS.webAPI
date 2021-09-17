@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai.hroads.webAPI.Domains;
 using senai.hroads.webAPI.Interfaces;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 namespace senai.hroads.webAPI.Controllers
 {
     [Produces("application/json")]
-
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PersonagensController : ControllerBase
@@ -35,6 +36,7 @@ namespace senai.hroads.webAPI.Controllers
             return Ok(_PersonagemRepository.BuscarPorId(id));
         }
 
+        [Authorize(Roles = "Jogador")]
         [HttpPost]
         public IActionResult Post(Personagem personagemCadastrar)
         {
@@ -42,6 +44,7 @@ namespace senai.hroads.webAPI.Controllers
             return StatusCode(201);
         }
 
+        [Authorize(Roles = "Jogador")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -49,6 +52,7 @@ namespace senai.hroads.webAPI.Controllers
             return NoContent();
         }
 
+        [Authorize(Roles = "Jogador")]
         [HttpPut("{id}")]
         public IActionResult Put(int id, Personagem personagemAtual)
         {
