@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucas Araujo\\Desktop\\HROADS.webAPI\\Back-end\\senai.hroads.webAPI\\senai.hroads.webAPI\\senai.hroads.webAPI.csproj": {}
+    "C:\\Users\\gusta\\OneDrive\\Área de Trabalho\\HROADS.webAPI\\Back-end\\senai.hroads.webAPI\\senai.hroads.webAPI\\senai.hroads.webAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucas Araujo\\Desktop\\HROADS.webAPI\\Back-end\\senai.hroads.webAPI\\senai.hroads.webAPI\\senai.hroads.webAPI.csproj": {
+    "C:\\Users\\gusta\\OneDrive\\Área de Trabalho\\HROADS.webAPI\\Back-end\\senai.hroads.webAPI\\senai.hroads.webAPI\\senai.hroads.webAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucas Araujo\\Desktop\\HROADS.webAPI\\Back-end\\senai.hroads.webAPI\\senai.hroads.webAPI\\senai.hroads.webAPI.csproj",
+        "projectUniqueName": "C:\\Users\\gusta\\OneDrive\\Área de Trabalho\\HROADS.webAPI\\Back-end\\senai.hroads.webAPI\\senai.hroads.webAPI\\senai.hroads.webAPI.csproj",
         "projectName": "senai.hroads.webAPI",
-        "projectPath": "C:\\Users\\Lucas Araujo\\Desktop\\HROADS.webAPI\\Back-end\\senai.hroads.webAPI\\senai.hroads.webAPI\\senai.hroads.webAPI.csproj",
-        "packagesPath": "C:\\Users\\Lucas Araujo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucas Araujo\\Desktop\\HROADS.webAPI\\Back-end\\senai.hroads.webAPI\\senai.hroads.webAPI\\obj\\",
+        "projectPath": "C:\\Users\\gusta\\OneDrive\\Área de Trabalho\\HROADS.webAPI\\Back-end\\senai.hroads.webAPI\\senai.hroads.webAPI\\senai.hroads.webAPI.csproj",
+        "packagesPath": "C:\\Users\\gusta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gusta\\OneDrive\\Área de Trabalho\\HROADS.webAPI\\Back-end\\senai.hroads.webAPI\\senai.hroads.webAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lucas Araujo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gusta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
