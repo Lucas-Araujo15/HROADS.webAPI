@@ -15,49 +15,48 @@ namespace senai.hroads.webAPI.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class UsuariosController : ControllerBase
+    public class PersonagensController : ControllerBase
     {
-        IUsuarioRepository _UsuarioRepository { get; set; }
+        IPersonagemRepository _PersonagemRepository { get; set; }
 
-        public UsuariosController()
+        public PersonagensController()
         {
-            _UsuarioRepository = new UsuarioRepository();
+            _PersonagemRepository = new PersonagemRepository();
         }
 
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_UsuarioRepository.ListarTodos());
+            return Ok(_PersonagemRepository.ListarTodos());
         }
 
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            return Ok(_UsuarioRepository.BuscarPorId(id));
+            return Ok(_PersonagemRepository.BuscarPorId(id));
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Jogador")]
         [HttpPost]
-        public IActionResult Post(Usuario usuarioInserir)
+        public IActionResult Post(Personagem personagemCadastrar)
         {
-            _UsuarioRepository.Inserir(usuarioInserir);
+            _PersonagemRepository.Inserir(personagemCadastrar);
             return StatusCode(201);
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Jogador")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            _UsuarioRepository.Deletar(id);
+            _PersonagemRepository.Deletar(id);
             return NoContent();
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Jogador")]
         [HttpPut("{id}")]
-        public IActionResult Put(int id, Usuario usuarioAtualizado)
+        public IActionResult Put(int id, Personagem personagemAtual)
         {
-
-            if (usuarioAtualizado.Nome == null || usuarioAtualizado.Senha == null || usuarioAtualizado.Email == null || usuarioAtualizado.IdTipoUsuario == 0 || id == 0)
+            if (personagemAtual.IdClasse == 0 || personagemAtual.Nome == null || personagemAtual.CapVida == 0 || personagemAtual.CapMana == 0)
             {
                 return BadRequest(
                     new
@@ -67,22 +66,21 @@ namespace senai.hroads.webAPI.Controllers
                 );
             }
 
-            Usuario usuarioBuscado = _UsuarioRepository.BuscarPorId(id);
+            Personagem personagemBuscado = _PersonagemRepository.BuscarPorId(id);
 
-            if (usuarioBuscado != null)
+            if(personagemBuscado != null)
             {
-                _UsuarioRepository.Atualizar(id, usuarioAtualizado);
+                _PersonagemRepository.Atualizar(id, personagemAtual);
                 return Ok();
             }
 
             return NotFound(
                     new
                     {
-                        mensagemErro = "Usuário não encontrado!",
+                        mensagemErro = "Personagem não encontrado!",
                         codErro = true
                     }
                 );
         }
-        
     }
 }

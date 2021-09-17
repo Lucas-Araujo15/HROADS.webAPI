@@ -15,32 +15,32 @@ namespace senai.hroads.webAPI.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class UsuariosController : ControllerBase
+    public class TiposUsuarioController : ControllerBase
     {
-        IUsuarioRepository _UsuarioRepository { get; set; }
+        ITipoUsuarioRepository _TipoUsuarioRepository { get; set; }
 
-        public UsuariosController()
+        public TiposUsuarioController()
         {
-            _UsuarioRepository = new UsuarioRepository();
+            _TipoUsuarioRepository = new TipoUsuarioRepository();
         }
 
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_UsuarioRepository.ListarTodos());
+            return Ok(_TipoUsuarioRepository.ListarTodos());
         }
 
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            return Ok(_UsuarioRepository.BuscarPorId(id));
+            return Ok(_TipoUsuarioRepository.BuscarPorId(id));
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles ="Admin")]
         [HttpPost]
-        public IActionResult Post(Usuario usuarioInserir)
+        public IActionResult Post(TipoUsuario tipoUsuarioCadastrar)
         {
-            _UsuarioRepository.Inserir(usuarioInserir);
+            _TipoUsuarioRepository.Inserir(tipoUsuarioCadastrar);
             return StatusCode(201);
         }
 
@@ -48,16 +48,15 @@ namespace senai.hroads.webAPI.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            _UsuarioRepository.Deletar(id);
+            _TipoUsuarioRepository.Deletar(id);
             return NoContent();
         }
 
         [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
-        public IActionResult Put(int id, Usuario usuarioAtualizado)
+        public IActionResult Put(int id, TipoUsuario novoTipoUsuario)
         {
-
-            if (usuarioAtualizado.Nome == null || usuarioAtualizado.Senha == null || usuarioAtualizado.Email == null || usuarioAtualizado.IdTipoUsuario == 0 || id == 0)
+            if (id == 0 || novoTipoUsuario.Titulo == null)
             {
                 return BadRequest(
                     new
@@ -67,22 +66,21 @@ namespace senai.hroads.webAPI.Controllers
                 );
             }
 
-            Usuario usuarioBuscado = _UsuarioRepository.BuscarPorId(id);
+            TipoUsuario tipoUsuarioBuscado = _TipoUsuarioRepository.BuscarPorId(id);
 
-            if (usuarioBuscado != null)
+            if(tipoUsuarioBuscado != null)
             {
-                _UsuarioRepository.Atualizar(id, usuarioAtualizado);
+                _TipoUsuarioRepository.Atualizar(id, novoTipoUsuario);
                 return Ok();
             }
 
             return NotFound(
                     new
                     {
-                        mensagemErro = "Usuário não encontrado!",
+                        mensagemErro = "Tipo de usuário não encontrado!",
                         codErro = true
                     }
                 );
         }
-        
     }
 }
