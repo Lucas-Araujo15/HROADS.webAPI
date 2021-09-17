@@ -38,6 +38,8 @@ namespace senai.hroads.webAPI
                     });
                 });
 
+
+
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = "JwtBearer";
