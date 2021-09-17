@@ -15,7 +15,6 @@ namespace senai.hroads.webAPI.Domains
 
         public int IdClasse { get; set; }
         public string NomeClasse { get; set; }
-
         public virtual ICollection<ClassHab> ClassHabs { get; set; }
         public virtual ICollection<Personagem> Personagems { get; set; }
     }
