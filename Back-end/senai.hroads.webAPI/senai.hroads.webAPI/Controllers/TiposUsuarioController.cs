@@ -36,7 +36,7 @@ namespace senai.hroads.webAPI.Controllers
             return Ok(_TipoUsuarioRepository.BuscarPorId(id));
         }
 
-        [Authorize(Roles ="Admin")]
+        [Authorize(Roles ="1")]
         [HttpPost]
         public IActionResult Post(TipoUsuario tipoUsuarioCadastrar)
         {
@@ -44,7 +44,7 @@ namespace senai.hroads.webAPI.Controllers
             return StatusCode(201);
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -52,7 +52,7 @@ namespace senai.hroads.webAPI.Controllers
             return NoContent();
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "1")]
         [HttpPut("{id}")]
         public IActionResult Put(int id, TipoUsuario novoTipoUsuario)
         {

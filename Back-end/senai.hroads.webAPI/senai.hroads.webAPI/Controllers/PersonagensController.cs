@@ -36,7 +36,7 @@ namespace senai.hroads.webAPI.Controllers
             return Ok(_PersonagemRepository.BuscarPorId(id));
         }
 
-        [Authorize(Roles = "Jogador")]
+        [Authorize(Roles = "2")]
         [HttpPost]
         public IActionResult Post(Personagem personagemCadastrar)
         {
@@ -44,7 +44,7 @@ namespace senai.hroads.webAPI.Controllers
             return StatusCode(201);
         }
 
-        [Authorize(Roles = "Jogador")]
+        [Authorize(Roles = "2")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -52,7 +52,7 @@ namespace senai.hroads.webAPI.Controllers
             return NoContent();
         }
 
-        [Authorize(Roles = "Jogador")]
+        [Authorize(Roles = "2")]
         [HttpPut("{id}")]
         public IActionResult Put(int id, Personagem personagemAtual)
         {

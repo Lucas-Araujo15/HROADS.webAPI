@@ -39,5 +39,13 @@ namespace senai.hroads.webAPI.Interfaces
         /// </summary>
         /// <param name="usuario">Objeto Usuario que será cadastrado</param>
         void Inserir(Usuario usuario);
+
+        /// <summary>
+        /// Busca um usuário através de sua senha e email
+        /// </summary>
+        /// <param name="email">Email do usuário</param>
+        /// <param name="senha">Senha do usuário</param>
+        /// <returns>Usuário que foi buscado</returns>
+        Usuario BuscarPorEmailSenha(string email, string senha);
     }
 }

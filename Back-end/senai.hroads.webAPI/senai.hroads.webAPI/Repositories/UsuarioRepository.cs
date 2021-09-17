@@ -54,5 +54,10 @@ namespace senai.hroads.webAPI.Repositories
         {
             return ctx.Usuarios.Include(u => u.IdTipoUsuarioNavigation).ToList();
         }
+
+        public Usuario BuscarPorEmailSenha(string email, string senha)
+        {
+            return ctx.Usuarios.FirstOrDefault(x => x.Email == email && x.Senha == senha);
+        }
     }
 }
