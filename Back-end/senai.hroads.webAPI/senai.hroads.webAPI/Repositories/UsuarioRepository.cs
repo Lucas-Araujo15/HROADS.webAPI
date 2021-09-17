@@ -30,7 +30,7 @@ namespace senai.hroads.webAPI.Repositories
 
         public Usuario BuscarPorId(int id)
         {
-            return ctx.Usuarios.FirstOrDefault(u => u.IdUsuario == id);
+            return ctx.Usuarios.Include(u => u.IdTipoUsuarioNavigation).FirstOrDefault(x => x.IdUsuario == id);
         }
 
         public void Deletar(int IdUsuario)

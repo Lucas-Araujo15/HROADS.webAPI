@@ -7333,19 +7333,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fic\\.nuget\\packages\\": {}
+    "C:\\Users\\Lucas Araujo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fic\\Desktop\\HROADS.webAPI\\Back-end\\senai.hroads.webAPI\\senai.hroads.webAPI\\senai.hroads.webAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Lucas Araujo\\Desktop\\HROADS.webAPI\\Back-end\\senai.hroads.webAPI\\senai.hroads.webAPI\\senai.hroads.webAPI.csproj",
       "projectName": "senai.hroads.webAPI",
-      "projectPath": "C:\\Users\\fic\\Desktop\\HROADS.webAPI\\Back-end\\senai.hroads.webAPI\\senai.hroads.webAPI\\senai.hroads.webAPI.csproj",
-      "packagesPath": "C:\\Users\\fic\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fic\\Desktop\\HROADS.webAPI\\Back-end\\senai.hroads.webAPI\\senai.hroads.webAPI\\obj\\",
+      "projectPath": "C:\\Users\\Lucas Araujo\\Desktop\\HROADS.webAPI\\Back-end\\senai.hroads.webAPI\\senai.hroads.webAPI\\senai.hroads.webAPI.csproj",
+      "packagesPath": "C:\\Users\\Lucas Araujo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lucas Araujo\\Desktop\\HROADS.webAPI\\Back-end\\senai.hroads.webAPI\\senai.hroads.webAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\fic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lucas Araujo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
