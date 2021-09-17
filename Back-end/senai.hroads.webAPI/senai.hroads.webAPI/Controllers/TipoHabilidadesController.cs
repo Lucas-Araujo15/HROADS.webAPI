@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai.hroads.webAPI.Domains;
 using senai.hroads.webAPI.Interfaces;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 namespace senai.hroads.webAPI.Controllers
 {
     [Produces("application/json")]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class TipoHabilidadesController : ControllerBase
@@ -49,6 +51,7 @@ namespace senai.hroads.webAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Cadastrar(TipoHabilidade novoTipoHab)
         {
@@ -63,6 +66,7 @@ namespace senai.hroads.webAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         [HttpPut("{idAtualiza}")]
         public IActionResult Atualizar(int idAtualiza, TipoHabilidade tipoHabatualizada)
         {
@@ -77,6 +81,7 @@ namespace senai.hroads.webAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         [HttpDelete("{idDeleta}")]
         public IActionResult Deletar(int idDeleta)
         {
@@ -84,6 +89,19 @@ namespace senai.hroads.webAPI.Controllers
             {
                 _tipohabRepository.Deletar(idDeleta);
                 return StatusCode(204);
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
+        }
+
+        [HttpGet("habilidades")]
+        public IActionResult ListarComHabilidades()
+        {
+            try
+            {
+                return Ok(_tipohabRepository.ListarComHabilidades());
             }
             catch (Exception erro)
             {

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai.hroads.webAPI.Domains;
 using senai.hroads.webAPI.Interfaces;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 namespace senai.hroads.webAPI.Controllers
 {
     [Produces("application/json")]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class HabilidadesController : ControllerBase
@@ -48,6 +50,7 @@ namespace senai.hroads.webAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Cadastrar(Habilidade novaHabilidade)
         {
@@ -62,6 +65,7 @@ namespace senai.hroads.webAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         [HttpPut("{idAtualiza}")]
         public IActionResult Atualizar(int idAtualiza, Habilidade HabilidadeAtualizada)
         {
@@ -76,6 +80,7 @@ namespace senai.hroads.webAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         [HttpDelete("{idDeleta}")]
         public IActionResult Deletar(int idDeleta)
         {
@@ -90,6 +95,7 @@ namespace senai.hroads.webAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         [HttpGet("tipos")]
         public IActionResult ListarComTipos()
         {

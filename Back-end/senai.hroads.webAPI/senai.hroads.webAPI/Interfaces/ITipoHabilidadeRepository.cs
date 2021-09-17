@@ -18,5 +18,7 @@ namespace senai.hroads.webAPI.Interfaces
 
         void Deletar(int idTipoHabilidade);
 
+        List<TipoHabilidade> ListarComHabilidades();
+
     }
 }

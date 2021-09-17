@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 #nullable disable
@@ -13,6 +14,8 @@ namespace senai.hroads.webAPI.Domains
         }
 
         public int IdHabilidade { get; set; }
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public int? IdTipoHab { get; set; }
         public string NomeHab { get; set; }
 

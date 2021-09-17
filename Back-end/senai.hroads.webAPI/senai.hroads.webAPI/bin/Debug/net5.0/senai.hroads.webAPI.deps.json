@@ -33,10 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "senai.hroads.webAPI/1.0.0": {
         "dependencies": {
-<<<<<<< HEAD
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.10",
-=======
->>>>>>> ClassHab
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "5.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.6",
@@ -340,7 +337,6 @@
           }
         }
       },
-<<<<<<< HEAD
       "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.10": {
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.7.1"
@@ -355,8 +351,6 @@
           "lib/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
         }
       },
-=======
->>>>>>> ClassHab
       "Microsoft.AspNetCore.JsonPatch/5.0.10": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
@@ -654,12 +648,7 @@
       },
       "Microsoft.IdentityModel.JsonWebTokens/6.7.1": {
         "dependencies": {
-<<<<<<< HEAD
           "Microsoft.IdentityModel.Tokens": "6.7.1"
-=======
-          "Microsoft.IdentityModel.Tokens": "5.6.0",
-          "Newtonsoft.Json": "12.0.2"
->>>>>>> ClassHab
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
@@ -699,14 +688,8 @@
       },
       "Microsoft.IdentityModel.Protocols.OpenIdConnect/6.7.1": {
         "dependencies": {
-<<<<<<< HEAD
           "Microsoft.IdentityModel.Protocols": "6.7.1",
           "System.IdentityModel.Tokens.Jwt": "6.7.1"
-=======
-          "Microsoft.IdentityModel.Protocols": "5.6.0",
-          "Newtonsoft.Json": "12.0.2",
-          "System.IdentityModel.Tokens.Jwt": "5.6.0"
->>>>>>> ClassHab
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {
@@ -720,13 +703,8 @@
       },
       "Microsoft.IdentityModel.Tokens/6.7.1": {
         "dependencies": {
-<<<<<<< HEAD
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.IdentityModel.Logging": "6.7.1",
-=======
-          "Microsoft.IdentityModel.Logging": "5.6.0",
-          "Newtonsoft.Json": "12.0.2",
->>>>>>> ClassHab
           "System.Security.Cryptography.Cng": "4.5.0"
         },
         "runtime": {
@@ -1185,14 +1163,8 @@
       },
       "System.IdentityModel.Tokens.Jwt/6.7.1": {
         "dependencies": {
-<<<<<<< HEAD
           "Microsoft.IdentityModel.JsonWebTokens": "6.7.1",
           "Microsoft.IdentityModel.Tokens": "6.7.1"
-=======
-          "Microsoft.IdentityModel.JsonWebTokens": "5.6.0",
-          "Microsoft.IdentityModel.Tokens": "5.6.0",
-          "Newtonsoft.Json": "12.0.2"
->>>>>>> ClassHab
         },
         "runtime": {
           "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll": {
@@ -3533,7 +3505,6 @@
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
     },
-<<<<<<< HEAD
     "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.10": {
       "type": "package",
       "serviceable": true,
@@ -3541,8 +3512,6 @@
       "path": "microsoft.aspnetcore.authentication.jwtbearer/5.0.10",
       "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.5.0.10.nupkg.sha512"
     },
-=======
->>>>>>> ClassHab
     "Microsoft.AspNetCore.JsonPatch/5.0.10": {
       "type": "package",
       "serviceable": true,

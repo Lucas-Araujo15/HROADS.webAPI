@@ -11,7 +11,6 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
-<<<<<<< HEAD
       "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.10": {
         "type": "package",
         "dependencies": {
@@ -27,8 +26,6 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-=======
->>>>>>> ClassHab
       "Microsoft.AspNetCore.JsonPatch/5.0.10": {
         "type": "package",
         "dependencies": {
@@ -2291,7 +2288,6 @@
         "logo.png"
       ]
     },
-<<<<<<< HEAD
     "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.10": {
       "sha512": "WGMw2zDSgLcxSO0jwBPpp20e+LpvAFe/AhUlEQIV5IkPJOIZtEKbF58tRZb/qoAIJ00GfREsSLZAey1OVDI2KA==",
       "type": "package",
@@ -2307,8 +2303,6 @@
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
-=======
->>>>>>> ClassHab
     "Microsoft.AspNetCore.JsonPatch/5.0.10": {
       "sha512": "mWblC4aXXHBwKqBOW1J9hF/TKLOyyiaBucoEiLFVgmAMLKe2yHFygmWD4mgvlLEr68w+BqO9RelGTrczZpImrg==",
       "type": "package",
@@ -7730,10 +7724,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-<<<<<<< HEAD
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.10",
-=======
->>>>>>> ClassHab
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 5.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer.Design >= 1.1.6",
@@ -7781,13 +7772,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
-<<<<<<< HEAD
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[5.0.10, )"
           },
-=======
->>>>>>> ClassHab
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
             "target": "Package",
             "version": "[5.0.10, )"
